@@ -23,4 +23,28 @@ function solution(str, ending){
   }
 
 myBoolean = solution("abc","")
-console.log(myBoolean);
+// console.log(myBoolean);
+
+
+//Unique in Order
+//Test.assertSimilar(uniqueInOrder('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
+//Aug 18, 2022
+var uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+  newArray = []
+  newArray.push(iterable[0])
+  for(x=1; x<iterable.length ;x++){
+    //You use 'newArray.length -1', in order to always get the last element in the array
+    if(iterable[x] != newArray[newArray.length -1]){
+      newArray.push(iterable[x])
+    }
+  }
+  //This detects if the iterable was empty, or only had undefined values in it
+  if(newArray == false){
+    newArray = []
+  }
+  return newArray;
+}
+
+answer = uniqueInOrder('AAAABBBCCDAABBB')
+console.log(answer)
