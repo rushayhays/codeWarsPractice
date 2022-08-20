@@ -22,7 +22,7 @@ function solution(str, ending){
     }
   }
 
-myBoolean = solution("abc","")
+// myBoolean = solution("abc","")
 // console.log(myBoolean);
 
 
@@ -46,5 +46,40 @@ var uniqueInOrder=function(iterable){
   return newArray;
 }
 
-answer = uniqueInOrder('AAAABBBCCDAABBB')
-console.log(answer)
+// answer = uniqueInOrder('AAAABBBCCDAABBB')
+// console.log(answer)
+
+
+//Split string into an array of pairs of two
+// assert.deepEqual(solution("abcdef"), ["ab", "cd", "ef"]);
+// assert.deepEqual(solution("abcdefg"), ["ab", "cd", "ef", "g_"]);
+// assert.deepEqual(solution(""), []);
+//Aug 19 2022
+function solution(str){
+  //declare neccessay variables here
+  newArray=[];
+
+   if(str.length == 1){
+     newString = str + "_"
+     newArray.push(newString)
+   }
+    else if(str.length % 2 == 0){
+      for(x=0; x < str.length; x+=2){
+        newString = str[x]+str[x+1]
+        newArray.push(newString)
+      }
+    }
+    else{
+      for(x=0; x<str.length-1; x+=2){
+        newString = str[x]+str[x+1]
+        newArray.push(newString)
+      }
+      lastString = ""
+      lastString = str[str.length-1] + "_"
+      newArray.push(lastString)
+    }
+  return newArray;
+}
+
+myAnswer = solution("abcdefgh")
+console.log(myAnswer)
