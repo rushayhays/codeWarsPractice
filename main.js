@@ -83,3 +83,25 @@ function solution(str){
 
 myAnswer = solution("abcdefgh")
 console.log(myAnswer)
+
+
+//Detect pangram, a sentence that uses every letter of the alphabet at least once
+//This is in c#
+// using System;
+
+// public static class Kata
+// {
+//   public static bool IsPangram(string str)
+//   {
+//     if(str.Length > 26){
+//       if((str.Contains("a") || str.Contains("A")) && (str.Contains("b") || str.Contains("B")) && (str.Contains("c") || str.Contains("C")) && (str.Contains("d") || str.Contains("D")) && (str.Contains("e") || str.Contains("E")) && (str.Contains("f") || str.Contains("F")) && (str.Contains("g") || str.Contains("G")) && (str.Contains("h") || str.Contains("H")) && (str.Contains("i") || str.Contains("I")) && (str.Contains("j") || str.Contains("J")) && (str.Contains("k") || str.Contains("K")) && (str.Contains("l") || str.Contains("L")) && (str.Contains("m") || str.Contains("M")) && (str.Contains("n") || str.Contains("N")) && (str.Contains("o") || str.Contains("O")) && (str.Contains("p") || str.Contains("P")) && (str.Contains("q") || str.Contains("Q")) && (str.Contains("r") || str.Contains("R")) && (str.Contains("s") || str.Contains("S")) && (str.Contains("t") || str.Contains("T")) && (str.Contains("u") || str.Contains("U")) && (str.Contains("v") || str.Contains("V")) && (str.Contains("w") || str.Contains("W")) && (str.Contains("x") || str.Contains("X")) && (str.Contains("y") || str.Contains("Y")) && (str.Contains("z") || str.Contains("Z"))){
+//         return true;
+//       }else{
+//         return false;
+//       }
+//     }
+//     else{
+//       return false;
+//     }
+//     throw new NotImplementedException();
+//   }
